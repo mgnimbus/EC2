@@ -6,6 +6,10 @@ output "count-ID" {
   value = aws_instance.count-test[*].id #latest splat
 }
 
+output "pub-ip" {
+  value = aws_instance.basic-test.public_ip
+}
+
 output "ROOT_DEVICE" {
   value = aws_instance.count-test[*].root_block_device
 }
