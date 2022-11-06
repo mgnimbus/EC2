@@ -1,10 +1,8 @@
-resource "aws_instance" "basic" {
-  ami = var.ami
-  #ami           = data.aws_ami.amazon_linux.id
+resource "aws_instance" "basic-test" {
+  ami           = var.ami
   instance_type = var.instance_type
-
   tags = {
-    Name = "basic_test"
+    "Name" = "basic_test"
   }
 }
 
